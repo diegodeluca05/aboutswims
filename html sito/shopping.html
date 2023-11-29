@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    <style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+nav {
+            background-color: blue;
+            text-align: center;
+        }
+ 
+    .nav2{
+        background-color: black;
+    }
+    .nav2ul{
+        background-color: black;
+    }
+
+        
+        nav ul {
+            list-style-type: none;
+            padding: 10;
+            margin-left: 80;
+            display:inline-table;
+            justify-content: center;
+            list-style-type: none;
+            overflow: hidden;
+             background-color: blue;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        nav li {
+            padding: 10px 20px;
+            float:inline-start;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+        header{
+    font-size: 50px ;
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+}
+.button {
+  position: relative;
+  background-color: yellowgreen;
+  border: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 5px;
+  width: 10spx;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 100%;
+  padding-left: 150%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.1s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+h1{
+    font-size: 50px;
+    font-style: Calibri;
+    font-stretch: semi-expanded;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.flex-container {
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  align-content: space-between;
+  overflow: scroll;
+ margin-left: 100px;
+ 
+  
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 150px;
+  margin: 50px;
+  text-align: center;
+  line-height: 15px;
+  font-size: 12px;
+  border-radius: 10%;
+ 
+}
+.button1 {
+  position: relative;
+  background-color: lightseagreen;
+  border: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 10spx;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+text-shadow: none;
+text-decoration-line: none;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 100%;
+  padding-left: 150%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.1s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+h4{
+    text-align: center;
+}
+.dorso{
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:white;
+    text-align: center;
+}
+.esercizio{
+    text-align: center;
+    font-style: Calibri; 
+}
+</style>
+</head>
+
+</style>
+
+<body>
+    <nav class="nav2">
+        <ul class="nav2ul">
+          <li><a href="nuoto2.html.html">About-Swim</li>
+
+            
+           
+          </ul>
+    </nav>
+    <nav>
+           
+        
+<ul>
+            <li a href="#costumi">costumi da allenamento</li>
+</ul>
+<ul>
+            <li>
+            <a href=#gara>costumi da gara</a>
+                
+            </li>
+            <li class="dropdown">
+                <li><a href="#allenamento">accessori per l'allenamento</a></li>
+                
+            </li>
+            </ul>
+    </nav>
+    <section class="esercizio">
+     <h1 id="gara">COSTUMI DA GARA</h1>
+        <br><hr width="1000px" color="black" height="0.5px"></br>
+        
+    </section>
+    <section class="esercizio">
+        <h1 id="costumi">COSTUMI DA ALLENAMENTO</h1>
+
+        <br><hr width="1000px" color="black" height="0.5px"></br>
+        
+        
+    </section>
+    <section class="esercizio">
+       <h1 id="#allenamento">ACCESSORI PER L'ALLENAMENTO</h1>
+        <br><br><br><br><br>
+        <br><hr width="1000px" color="black" height="0.5px"></br>
+    </section>
+    <section>
+        <h4>I PIU'POPOLARI</h4>
+    <div class="flex-container"> 
+        <div>
+        <img src="ranista.jpeg"h1
+        height="80px";
+        width="80px";
+        >
+        <h3> <a href="rana.html"> programma per il miglioramento della rana</a></h3>
+        <ul>
+        <li>miglioramento della tecnica</li>
+        <li>aumento della velocità</li>
+        <li>aumento dello spazio per bracciata</li>
+        </ul>
+        <button class="button1"><a href="rana.html">read more</a></button>
+         </div>
+        <div>
+            <img src="ranista.jpeg" 
+            height="80px";
+            width="80px";
+            >
+    
+        <h3> <a href="rana.html"> programma per il miglioramento dello stile</a></h3>
+         <ul>
+        <li>miglioramento della tecnica</li>
+        <li>aumento della velocità</li>
+        <li>aumento dello spazio per bracciata</li>
+         </ul>
+         <button class="button1" style="color: #333;"><a href="rana.html">read more</a></button>
+        </div>
+        <div>
+            <img src="ranatecnica.jpeg"
+            height="80px";
+            width="80px";
+            >
+        <h3> <a href="rana.html"> programma per il miglioramento del dorso</a></h3>
+        <ul>
+        <li>miglioramento della tecnica</li>
+        <li>aumento della velocità</li>
+        <li>aumento dello spazio per bracciata</li>
+        </ul>
+         <button style="color: #333;" class="button1" ><a href="rana.html">read more</a></button>
+        </div>
+        <div>
+            <img src="ranista.jpeg" 
+            height="80px";
+            width="80px";>
+        <h3> <a href="rana.html"> programma per il miglioramento del delfino</a></h3>
+        <ul>
+        <li>miglioramento della tecnica</li>
+        <li>aumento della velocità</li>
+        <li>aumento dello spazio per bracciata</li>
+        </ul>
+         <button  style="color: #333" class="button1"  ><a href="rana.html">read more</a></button>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+            
+              <div class="row">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="john@example.com">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="New York">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="NY">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-50">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">Exp Year</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="2018">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="352">
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+              </label>
+              <input type="submit" value="Continue to checkout" class="btn">
+            </form>
+          </div>
+        </div>
+        <div class="col-25">
+          <div class="container">
+            <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
